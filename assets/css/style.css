@@ -27,7 +27,7 @@ div {
     display: flex;
     background-image: url("../images/gw2-color.jpg");
     background-position: 100%;
-    background-size: cover;
+    background-size: contain;
     /* height et width sont important si l'image est en background-image car la div n'a pas de dimension */
     height: 100%;
     max-width: 1920px;
@@ -43,7 +43,7 @@ div {
     position: absolute;
     inset:0;
     background-image: url("../images/gw2-draw.jpg");
-    background-size: cover;
+    background-size: contain;
    background-repeat: no-repeat;
    justify-content: center;
     -webkit-mask-image: url("../images/inkmask.png");
