@@ -59,7 +59,7 @@ div {
     width: 100vw;
 }
 .maskAnimation{
-    animation: addColor 1000ms steps(32) forwards;
+    animation: addColor 1s steps(32) forwards;
 }
 @keyframes addColor {
 
@@ -68,8 +68,8 @@ div {
         mask-position:0% 0%;
     }
     100% {
-        -webkit-mask-position:100% 0%;
-        mask-position:100% 0%;
+        -webkit-mask-position:100% 0;
+        mask-position:100% 0;
     }
 }
 
