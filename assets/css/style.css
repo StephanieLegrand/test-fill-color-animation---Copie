@@ -1,0 +1,83 @@
+img{
+    max-width: 100%;
+    display: block;
+    background-position: center;
+    
+}
+.maskContainer {
+    position: relative;
+    bottom: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    z-index: 100;
+    overflow: hidden;
+    min-height: calc(100vh - 85px);
+
+}
+.resetAnimation{
+    border-radius: 5px;
+}
+.colorImage{
+    background-image: url("../images/gw2-color.jpg");
+    background-position: 100%;
+    background-size: cover;
+    /* height et width sont important si l'image est en background-image car la div n'a pas de dimension */
+    height: 100%;
+    max-width: 1920px;
+    position: absolute;
+    inset:0;
+    left:0;
+}
+.drawImage {
+    background-position: 100%;
+    background-size: cover;
+    height: 100%;
+    max-width: 1920px;
+    position: absolute;
+    inset:0;
+    background-image: url("../images/gw2-draw.jpg");
+    background-size: cover;
+   background-repeat: no-repeat;
+   justify-content: center;
+    -webkit-mask-image: url("../images/inkmask.png");
+    -webkit-mask-size:3300% 100%;
+    -webkit-mask-position:0 0;
+    mask-image: url("../images/inkmask.png");
+    mask-origin: border-box;
+    mask-size:3300% 100%;
+    mask-position:0 0;
+    opacity: 1;
+    z-index:0;
+}
+.maskAnimation{
+    animation: addColor 1000ms steps(32) forwards;
+}
+@keyframes addColor {
+
+    0% {
+        -webkit-mask-position:0% 0%;
+        mask-position:0% 0%;
+    }
+    100% {
+        -webkit-mask-position:100% 0%;
+        mask-position:100% 0%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px){
+.maskContainer {
+    min-height: calc(100vh - 50px);
+}
+.Images {
+    height: 80%;
+    background-position: 25% 100%;
+}
+}
+@media screen and (max-width: 767px) {
+.Images {
+    background-position: 25% 100%;
+    background-size: cover;
+    height: 75%;
+    }
+}
