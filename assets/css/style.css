@@ -29,10 +29,9 @@ div {
     background-image: url("../images/gw2-color.jpg");
     background-position: 0%;
     background-size: contain;
-    /* height et width sont important si l'image est en background-image car la div n'a pas de dimension */
+    background-repeat: no-repeat;
     height: 100%;
     max-width: 1920px;
-    background-repeat: no-repeat;
     position: absolute;
     inset:0;
     width: 100vw;
